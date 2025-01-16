@@ -1,0 +1,24 @@
+{
+    "KPlugin": {
+        "Authors": [
+            {
+                "Email": "akbkuku@akbkuku.com",
+                "Name": "Shelby Jueden"
+	    }
+        ],
+        "Category": "",
+        "Description": "Customized panel with applications grouped in menus",
+	"EnabledByDefault": true,
+        "Id": "com.akbkuku.popupPanel",
+        "License": "MIT",
+        "Name": "Popup Panel",
+        "ServiceTypes": [
+            "Plasma/LayoutTemplate"
+        ],
+        "Website": "https://github.com/AkBKukU/kde-custom-panel/tree/main"
+    },
+    "X-Plasma-ContainmentCategories": [
+        "panel"
+    ],
+    "X-Plasma-Shell": "plasmashell"
+}
