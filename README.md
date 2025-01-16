@@ -8,11 +8,15 @@ This repo is both my current default panel config as well as an example of how t
 
 ## How it Works
 
-Default panels have their configuration stored in a JSON file, while your live plasmashell config
+Default panels have their configuration stored in a Javascript file, while your live plasmashell config
 is stored in a less standard key/pair format. You have to look through the current config and 
-manually convert it to a JSON file.
+manually convert it to a Javascript file.
 
-## The Basic Process
+Default panels also have a `metadata.json` file that describes what the panel is. You will need
+to change the `[KPlugin][Id]` and `[KPlugin][Name]` files at a minimum in order to make your
+panel unique and identifiable
+
+## The Basic Conversion Process
 
 Start by configuring a normal default panel how you want. After you are done open the following 
 file: `$HOME/.config/plasma-org.kde.plasma.desktop-appletsrc` and you will find the configuration 
@@ -64,3 +68,17 @@ pop_hardware.writeConfig("apps", [
 ```
 
 Widgets added to the `panel` object apear in the order they are added.
+
+## Installation
+
+Once you are done configuring your customized default panel you can install it with the 
+following command:
+```
+kpackagetool5 -t Plasma/LayoutTemplate --install /path/to/custom-panel
+```
+
+If you want to update the panel or just remove it, you can remove it with this:
+```
+kpackagetool5 -t Plasma/LayoutTemplate --remove panel.id
+```
+*"panel.id" needs to be the value you set in `metadata.json` for [KPlugin][Id]*
