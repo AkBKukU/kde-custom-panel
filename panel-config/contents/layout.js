@@ -119,7 +119,9 @@ pop_archiving.writeConfig("apps", [
     "DomesdayDuplicator.desktop",
     "",
     "scanner.desktop",
-    "xsane.desktop"
+    "xsane.desktop",
+    "",
+    "puddletag.desktop"
 ])
 // -- Games --
 var pop_games = panel.addWidget("tuscoss.betterPopupLauncher")
@@ -143,6 +145,7 @@ pop_games.writeConfig("apps", [
     "ps2.desktop",
     "dolphin-emu.desktop",
     "yuzu.desktop",
+    "Ryunix.desktop",
     "",
     "jstest-gtk.desktop"
 ])
